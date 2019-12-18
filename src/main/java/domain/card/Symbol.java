@@ -21,7 +21,11 @@ public enum Symbol {
         this.score = score;
     }
 
-    public int getScore() {
-        return score;
-    }
+	public int getScore() {
+		return score;
+	}
+
+	public boolean isAce() {
+		return this == ACE;
+	}
 }
