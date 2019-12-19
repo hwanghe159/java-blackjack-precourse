@@ -26,10 +26,14 @@ public class Card {
     	return this.type;
     }
 
-    public Score calculate(Score score) {
-    	
-    }
+	public Score calculate(Score score) {
+		return new Score(this.symbol.getScore() + score.getScore());
+	}
     
+	public String getInformation() {
+		return this.symbol.getName()+this.type.getName();
+	}
+	
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

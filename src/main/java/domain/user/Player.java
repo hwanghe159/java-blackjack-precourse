@@ -31,4 +31,8 @@ public class Player {
     public double getBettingMoney() {
     	return this.bettingMoney;
     }
+    
+    public Cards getCards() {
+    	return this.cards;
+    }
 }

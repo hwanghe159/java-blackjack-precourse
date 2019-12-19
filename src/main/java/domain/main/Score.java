@@ -32,6 +32,10 @@ public class Score {
 	private boolean isBust() {
 		return this.score > BLACKJACK_SCORE;
 	}
+	
+	public int getScore() {
+		return this.score;
+	}
 
 	// ...
 }

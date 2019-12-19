@@ -12,7 +12,7 @@ import domain.user.Player;
 public class BlackJackGame {
 	
 	List<Player> players = new ArrayList<Player>();
-	Dealer dealer;
+	Dealer dealer = new Dealer();
 	List<Card> cardFactory = CardFactory.create();
 	int cardIndex = 0;
 	
@@ -46,6 +46,7 @@ public class BlackJackGame {
 		dealer.addCard(cardFactory.get(cardIndex++));
 		dealer.addCard(cardFactory.get(cardIndex++));
 		for(Player player:players) {
+			player.addCard(cardFactory.get(cardIndex++));
 			player.addCard(cardFactory.get(cardIndex++));
 		}
 		UI.printDistributeResult(dealer,players);

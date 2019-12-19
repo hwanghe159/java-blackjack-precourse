@@ -32,10 +32,19 @@ public class Cards {
 		return score;
 	}
 
-	//에이스인 카드를 걸러서 가장 첫번째가 존재한다면 true
 	private static boolean hasAce(List<Card> original) {
-		return original.stream().filter(Card::isAce).findFirst().isPresent();
+		return original.stream().filter(card -> card.getSymbol().isAce()).findFirst().isPresent();
 	}
 	
+	public void add(Card card) {
+		cards.add(card);
+	}
 	
+	public Card get(int index) {
+		return cards.get(index);
+	}
+	
+	public List<Card> getCards(){
+		return this.cards;
+	}
 }

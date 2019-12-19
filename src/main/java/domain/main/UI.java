@@ -3,6 +3,7 @@ package domain.main;
 import java.util.List;
 import java.util.Scanner;
 
+import domain.card.Card;
 import domain.user.Dealer;
 import domain.user.Player;
 
@@ -40,6 +41,23 @@ public class UI {
 		}
 		System.out.println("에게 2장의 카드를 나누었습니다.");
 		System.out.print("딜러: ");
-		
+		System.out.println(dealer.getCards().get(0).getInformation());
+		for(Player player : players) {
+			printNameAndCardInfoOf(player);
+		}
+	}
+	
+	public static void printNameAndCardInfoOf(Player player) {
+		System.out.print(player.getName()+"카드: ");
+		printCardInfo(player.getCards().getCards().get(0));
+		for(int index = 1; index<player.getCards().getCards().size(); index++) {
+			System.out.print(", ");
+			printCardInfo(player.getCards().getCards().get(index));
+		}
+		System.out.println();
+	}
+	
+	public static void printCardInfo(Card card) {
+		System.out.print(card.getSymbol().getName()+card.getType().getName());
 	}
 }
