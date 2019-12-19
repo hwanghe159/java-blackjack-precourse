@@ -1,5 +1,7 @@
 package domain.main;
 
+import java.util.Objects;
+
 public class YesOrNo {
 	private final char value;
 

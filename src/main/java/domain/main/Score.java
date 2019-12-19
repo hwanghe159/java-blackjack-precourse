@@ -1,9 +1,9 @@
 package domain.main;
 
-//각 카드 숫자의 합
+//각 카드 숫자의 합, 
 public class Score {
 	private static final int SCORE_MIN = 0;
-	private static final int BLACKJACE_SCORE = 21;
+	private static final int BLACKJACK_SCORE = 21;
 	private static final int TEN = 10;
 
 	public static final Score ZERO = new Score(SCORE_MIN);
@@ -30,7 +30,7 @@ public class Score {
 	}
 
 	private boolean isBust() {
-		return this.score > BLACKJACE_SCORE;
+		return this.score > BLACKJACK_SCORE;
 	}
 
 	// ...

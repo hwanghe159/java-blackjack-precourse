@@ -25,12 +25,15 @@ public class Cards {
 	private Score calculateRawScore() {
 		Score score = Score.ZERO;
 		for (Card card : cards) {
-			score = card.calcuate(score);
+			score = card.get
 		}
 		return score;
 	}
 
+	//에이스인 카드를 걸러서 가장 첫번째가 존재한다면 true
 	private static boolean hasAce(List<Card> original) {
 		return original.stream().filter(Card::isAce).findFirst().isPresent();
 	}
+	
+	
 }
