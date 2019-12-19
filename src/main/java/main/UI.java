@@ -28,6 +28,9 @@ public class UI {
 	public static void distributionCompleteMessage(List<Player> players) {
 		System.out.print("딜러와 ");
 		System.out.print(players.get(0).getName());
+		for(int i = 1; i<players.size(); i++) {
+			System.out.print(", "+players.get(i).getName());
+		}
 		System.out.println("에게 2장의 카드를 나누었습니다.");
 	}
 }
