@@ -1,6 +1,9 @@
 package main;
 
+import java.util.List;
 import java.util.Scanner;
+
+import domain.user.Player;
 
 public class UI {
 	public static void requestPlayerNamesMessage() {
@@ -20,5 +23,11 @@ public class UI {
 		Scanner scan = new Scanner(System.in);
 		System.out.println(playerName+"의 배팅 금액은?");
 		return scan.nextDouble();
+	}
+	
+	public static void distributionCompleteMessage(List<Player> players) {
+		System.out.print("딜러와 ");
+		System.out.print(players.get(0).getName());
+		System.out.println("에게 2장의 카드를 나누었습니다.");
 	}
 }
