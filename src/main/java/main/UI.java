@@ -3,6 +3,7 @@ package main;
 import java.util.List;
 import java.util.Scanner;
 
+import domain.card.Card;
 import domain.user.Dealer;
 import domain.user.Player;
 
@@ -42,6 +43,9 @@ public class UI {
 		}
 	}
 
+	public static void printCardInfo(Card card) {
+		
+	}
 	
 	public static void printOneCardOfDealer(Dealer dealer) {
 		System.out.print("딜러: " + printCardInfo(dealer.getCard(0)));
