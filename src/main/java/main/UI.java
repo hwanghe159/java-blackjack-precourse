@@ -39,21 +39,17 @@ public class UI {
 	public static void printDistributionResult(Dealer dealer, List<Player> players) {
 		printOneCardOfDealer(dealer);
 		for (Player player : players) {
-			printTwoCardOfPlayer(player);
+			printTwoCardsOfPlayer(player);
 		}
-	}
-
-	public static void printCardInfo(Card card) {
-		
 	}
 	
 	public static void printOneCardOfDealer(Dealer dealer) {
-		System.out.print("딜러: " + printCardInfo(dealer.getCard(0)));
+		System.out.print("딜러: " + dealer.getCard(0).getCardInfo());
 	}
 
-	public static void printTwoCardOfPlayer(Player player) {
+	public static void printTwoCardsOfPlayer(Player player) {
+		System.out.print(player.getName()+"카드: ");
 		
-
 	}
 
 }

@@ -9,6 +9,7 @@ import domain.user.Player;
 
 public class BlackJackGame {
 
+	static final int MAX_PLAYERS_NUM = 8;
 	List<Player> players = new ArrayList<Player>();
 	Dealer dealer = new Dealer();
 	CardFactory cardFactory = new CardFactory();
@@ -22,6 +23,9 @@ public class BlackJackGame {
 	public void prepare() {
 		UI.requestPlayerNamesMessage();
 		String[] playerNames = UI.inputPlayerNames().split(",");
+		if (playerNames.length > MAX_PLAYERS_NUM) {
+			throw new IllegalArgumentException("플레이어는 8명 이하여야 합니다.");
+		}
 		for (String playerName : playerNames) {
 			createPlayer(playerName, UI.requestAndInputBettingMoney(playerName));
 		}

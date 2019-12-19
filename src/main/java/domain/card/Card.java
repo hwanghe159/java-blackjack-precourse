@@ -16,6 +16,9 @@ public class Card {
     }
 
     // TODO Card 관련 추가 기능 구현
+    public String getCardInfo() {
+    	return this.symbol.getName() + this.type.getName();
+    }
 
     @Override
     public boolean equals(Object o) {
