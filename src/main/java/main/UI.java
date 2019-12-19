@@ -42,15 +42,15 @@ public class UI {
 			printTwoCardsOfPlayer(player);
 		}
 	}
-	
+
 	public static void printOneCardOfDealer(Dealer dealer) {
 		System.out.println("딜러: " + dealer.getCard(0).getCardInfo());
 	}
 
 	public static void printTwoCardsOfPlayer(Player player) {
-		System.out.print(player.getName()+"카드: ");
-		System.out.print(player.);
-		
+		System.out.println(
+				player.getName() + "카드: " + player.getCard(0).getCardInfo() + ", " + player.getCard(1).getCardInfo());
+
 	}
 
 }
