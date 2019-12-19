@@ -15,4 +15,8 @@ public class Cards {
 	public void add(Card card) {
 		this.cards.add(card);
 	}
+	
+	public Card getCard(int index) {
+		return cards.get(index);
+	}
 }

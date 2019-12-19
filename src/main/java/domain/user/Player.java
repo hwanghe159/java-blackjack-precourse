@@ -11,7 +11,7 @@ import java.util.List;
 public class Player {
     private final String name;
     private final double bettingMoney;
-    private final List<Card> cards = new ArrayList<>();
+    private final Cards cards = new Cards();
 
     public Player(String name, double bettingMoney) {
         this.name = name;
