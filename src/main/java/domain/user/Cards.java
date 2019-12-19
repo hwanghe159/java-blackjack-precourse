@@ -1,16 +1,18 @@
-package domain.card;
+package domain.user;
 
 import java.util.List;
 
+import domain.card.Card;
 import domain.main.Score;
 
 public class Cards {
+	
 	private final List<Card> cards;
 
 	public Cards(List<Card> cards) {
 		this.cards = cards;
 	}
-
+	
 	public Score score() {
 		return reviseAceScore(calculateRawScore());
 	}
@@ -25,7 +27,7 @@ public class Cards {
 	private Score calculateRawScore() {
 		Score score = Score.ZERO;
 		for (Card card : cards) {
-			score = card.getSymbol().getScore();
+			score = card.calculate(score);
 		}
 		return score;
 	}

@@ -34,6 +34,12 @@ public class UI {
 	}
 	
 	public static void printDistributeResult(Dealer dealer, List<Player> players) {
+		System.out.print("딜러와 " + players.get(0).getName());
+		for(int playerIndex = 1; playerIndex<players.size(); playerIndex++) {
+			System.out.print(", "+players.get(playerIndex).getName());
+		}
+		System.out.println("에게 2장의 카드를 나누었습니다.");
+		System.out.print("딜러: ");
 		
 	}
 }

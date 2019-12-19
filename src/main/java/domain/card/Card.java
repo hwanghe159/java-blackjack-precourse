@@ -2,6 +2,8 @@ package domain.card;
 
 import java.util.Objects;
 
+import domain.main.Score;
+
 /**
  * 카드 한장을 의미하는 객체
  */
@@ -24,6 +26,10 @@ public class Card {
     	return this.type;
     }
 
+    public Score calculate(Score score) {
+    	
+    }
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
