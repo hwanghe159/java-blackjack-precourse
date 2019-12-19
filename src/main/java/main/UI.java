@@ -10,6 +10,15 @@ public class UI {
 	public static String inputPlayerNames() {
 		Scanner scan = new Scanner(System.in);
 		String playerNames = scan.nextLine();
+		if(playerNames == null || playerNames.contains(",,")) {
+			throw new IllegalArgumentException("올바르게 입력해 주세요.");
+		}
 		return playerNames;
+	}
+	
+	public static double requestAndInputBettingMoney(String playerName) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println(playerName+"의 배팅 금액은?");
+		return scan.nextDouble();
 	}
 }
