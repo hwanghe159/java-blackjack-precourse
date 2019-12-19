@@ -1,6 +1,6 @@
 package domain.main;
 
-//각 카드 숫자의 합, 
+//각 카드 숫자의 합
 public class Score {
 	private static final int SCORE_MIN = 0;
 	private static final int BLACKJACK_SCORE = 21;
