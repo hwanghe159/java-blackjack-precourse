@@ -44,11 +44,12 @@ public class UI {
 	}
 	
 	public static void printOneCardOfDealer(Dealer dealer) {
-		System.out.print("딜러: " + dealer.getCard(0).getCardInfo());
+		System.out.println("딜러: " + dealer.getCard(0).getCardInfo());
 	}
 
 	public static void printTwoCardsOfPlayer(Player player) {
 		System.out.print(player.getName()+"카드: ");
+		System.out.print(player.);
 		
 	}
 
