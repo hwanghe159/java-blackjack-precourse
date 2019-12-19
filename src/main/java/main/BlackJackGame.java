@@ -8,6 +8,7 @@ public class BlackJackGame {
 	}
 	
 	public void prepare() {
+		UI.requestPlayerNamesMessage();
 		
 	}
 	
