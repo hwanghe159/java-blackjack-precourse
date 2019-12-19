@@ -41,7 +41,7 @@ public class BlackJackGame {
 			player.addCard(cardFactory.pop());
 		}
 		UI.distributionCompleteMessage(players);
-		UI.distributionResult(dealer,players);
+		UI.printDistributionResult(dealer, players);
 	}
 
 	public void gamePlay() {
