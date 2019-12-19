@@ -9,7 +9,7 @@ import java.util.List;
  * 게임 딜러를 의미하는 객체
  */
 public class Dealer {
-    private final List<Card> cards = new ArrayList<>();
+    private final Cards cards = new Cards();
 
     public Dealer() {}
 

@@ -41,4 +41,8 @@ public class UI {
 			printTwoCardOfPlayer(player);
 		}
 	}
+	
+	public static void printOneCardOfDealer(Dealer dealer) {
+		System.out.print("딜러: " + dealer.)
+	}
 }
