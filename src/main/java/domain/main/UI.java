@@ -13,5 +13,13 @@ public class UI {
 		return names.split(",");
 	}
 	
+	public static void askBettingMoney(String name) {
+		System.out.println(name+"의 배팅 금액은?");
+	}
 	
+	public static double inputBettingMoney(String name) {
+		Scanner scan = new Scanner(System.in);
+		double bettingMoney = scan.nextDouble();//예외처리 필요
+		return bettingMoney;
+	}
 }
