@@ -19,6 +19,10 @@ public class Card {
     public String getCardInfo() {
     	return this.symbol.getName() + this.type.getName();
     }
+    
+    public boolean isAce() {
+    	return this.symbol == Symbol.ACE;
+    }
 
     @Override
     public boolean equals(Object o) {

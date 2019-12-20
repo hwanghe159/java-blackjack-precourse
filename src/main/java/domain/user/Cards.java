@@ -27,9 +27,13 @@ public class Cards {
 	}
 	
 	public Score calculate() {
-		Score score = new Score(0);
-		for(Card card:cards) {
-			score.getS
+		int sum = 0;
+		for (Card card : cards) {
+			sum = calculateSubRoutine(sum, card);
 		}
+	}
+
+	private int calculateSubRoutine(int sum, Card card) {
+		
 	}
 }
