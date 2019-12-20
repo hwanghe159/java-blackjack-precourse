@@ -61,12 +61,20 @@ public class UI {
 		System.out.println();
 	}
 
-	public static void printAllCardsAndResultOfPlayer(Player player) {
+	public static void printlnAllCardsAndResultOfPlayer(Player player) {
 		System.out.print(player.getName() + "카드: " + player.getCard(0).getCardInfo());
 		for (int i = 1; i < player.getCards().getSize(); i++) {
 			System.out.print(", " + player.getCard(i).getCardInfo());
 		}
-		System.out.println(" - 결과: "+player.getCards())
+		System.out.println(" - 결과: " + player.getCards().calculate().getScore());
+	}
+
+	public static void printlnAllCardsAndResultOfDealer(Dealer dealer) {
+		System.out.print("딜러 카드: " + dealer.getCard(0).getCardInfo());
+		for (int i = 1; i < dealer.getCards().getSize(); i++) {
+			System.out.print(", " + dealer.getCard(i).getCardInfo());
+		}
+		System.out.println(" - 결과: " + dealer.getCards().calculate().getScore());
 	}
 
 	public static boolean requestYesOrNo(String playerName) {
@@ -79,4 +87,6 @@ public class UI {
 	public static void dealerReceivedOneCardMessage() {
 		System.out.println("딜러는 16이하라 한 장의 카드를 더 받았습니다.");
 	}
+	
+	
 }

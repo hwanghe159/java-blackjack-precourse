@@ -19,6 +19,11 @@ public class Dealer {
 	}
 
 	// TODO 추가 기능 구현
+	
+	public Cards getCards() {
+    	return this.cards;
+    }
+	
 	public Card getCard(int index) {
 		return cards.getCard(index);
 	}
