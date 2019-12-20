@@ -6,6 +6,10 @@ import java.util.List;
 import domain.card.Card;
 
 public class Cards {
+	private static final int TEN = 10;
+	private static final int ELEVEN = 11;
+	
+	
 	private final List<Card> cards;
 	private final Score score;
 	
@@ -31,11 +35,17 @@ public class Cards {
 		for (Card card : cards) {
 			sum = calculateSubRoutine(sum, card);
 		}
+		return new Score(sum);
 	}
 
 	private int calculateSubRoutine(int sum, Card card) {
-		if(!card.isAce()) {
-			return sum+card
+		if (!card.isAce()) {
+			return sum + card.getSymbol().getScore();
 		}
+		if (sum <= TEN) {
+			sum += ELEVEN;
+			return sum;
+		}
+		return ++sum;
 	}
 }
