@@ -60,9 +60,12 @@ public class UI {
 		}
 		System.out.println();
 	}
-
-	public static void requestOneMoreCardMessage(String playerName) {
+	
+	public static boolean requestYesOrNo(String playerName) {
+		Scanner scan = new Scanner(System.in);
 		System.out.println(playerName + "는 한 장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
+		YesOrNo yesOrNo = new YesOrNo(scan.nextLine());
+		return yesOrNo.isYes();
 	}
 
 }
