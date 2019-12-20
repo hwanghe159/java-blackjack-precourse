@@ -52,5 +52,9 @@ public class UI {
 				player.getName() + "카드: " + player.getCard(0).getCardInfo() + ", " + player.getCard(1).getCardInfo());
 
 	}
+	
+	public static void requestOneMoreCardMessage(String playerName) {
+		System.out.println(playerName+"는 한 장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
+	}
 
 }
