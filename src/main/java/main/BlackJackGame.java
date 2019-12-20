@@ -56,14 +56,16 @@ public class BlackJackGame {
 	}
 
 	private void playerGamePlay(Player player) {
-		while(UI.requestYesOrNo(player.getName())) {
+		while (UI.requestYesOrNo(player.getName())) {
 			player.addCard(cardFactory.pop());
 			UI.printAllCardsOfPlayer(player);
 		}
 	}
 
 	private void dealerGamePlay() {
-		if()
+		if (dealer.decideOneMoreCardOrNot()) {
+			UI.dealerReceivedOneCardMessage();
+		}
 	}
 
 	private void result() {

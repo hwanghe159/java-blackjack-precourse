@@ -68,4 +68,7 @@ public class UI {
 		return yesOrNo.isYes();
 	}
 
+	public static void dealerReceivedOneCardMessage() {
+		System.out.println("딜러는 16이하라 한 장의 카드를 더 받았습니다.");
+	}
 }
