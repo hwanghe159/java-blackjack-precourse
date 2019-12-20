@@ -51,10 +51,19 @@ public class BlackJackGame {
 	}
 
 	private void gamePlay() {
-		for (Player player : players) {
-			playerGamePlay(player);
+		for (int i = 0; i < players.size(); i++) {
+			playerGamePlay(players.get(i));
+			decideIsAlive(i);
 		}
 		dealerGamePlay();
+	}
+
+	private void decideIsAlive(int index) {
+		if (players.get(index).getCards().isBust()) {
+			isAlive.set(index, false);
+			return;
+		}
+		isAlive.set(index, true);
 	}
 
 	private void playerGamePlay(Player player) {
@@ -72,13 +81,12 @@ public class BlackJackGame {
 	}
 
 	private void result() {
-		UI.printDealerAndPlayersResult(dealer,players);
+		UI.printDealerAndPlayersResult(dealer, players);
 		calculateBettingMoney();
 		UI.printResultBettingMoney();
 	}
 
 	private void calculateBettingMoney() {
-		// TODO Auto-generated method stub
-		
+
 	}
 }

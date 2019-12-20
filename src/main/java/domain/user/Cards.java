@@ -48,4 +48,9 @@ public class Cards {
 		}
 		return ++sum;
 	}
+	
+	public boolean isBust() {
+		calculate();
+		return this.score.isBust();
+	}
 }

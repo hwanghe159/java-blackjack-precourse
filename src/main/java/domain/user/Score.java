@@ -23,4 +23,8 @@ public class Score {
 	public boolean isBelow16() {
 		return this.score <= DEALER_BENCHMARK;
 	}
+	
+	public boolean isBust() {
+		return this.score > BLACKJACK_SCORE;
+	}
 }
