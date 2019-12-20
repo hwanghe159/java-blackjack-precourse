@@ -52,15 +52,17 @@ public class UI {
 				player.getName() + "카드: " + player.getCard(0).getCardInfo() + ", " + player.getCard(1).getCardInfo());
 
 	}
-	
+
 	public static void printAllCardsOfPlayer(Player player) {
 		System.out.println(player.getName() + "카드: " + player.getCard(0).getCardInfo());
-		for(int i = 1; i<player.getC)
-
+		for (int i = 1; i < player.getCards().getSize(); i++) {
+			System.out.print(", " + player.getCard(i).getCardInfo());
+		}
+		System.out.println();
 	}
 
 	public static void requestOneMoreCardMessage(String playerName) {
-		System.out.println(playerName+"는 한 장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
+		System.out.println(playerName + "는 한 장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
 	}
 
 }
