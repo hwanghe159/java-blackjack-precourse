@@ -20,7 +20,7 @@ public class BlackJackGame {
 		result();
 	}
 
-	public void prepare() {
+	private void prepare() {
 		UI.requestPlayerNamesMessage();
 		String[] playerNames = UI.inputPlayerNames().split(",");
 		if (playerNames.length > MAX_PLAYERS_NUM) {
@@ -32,11 +32,11 @@ public class BlackJackGame {
 		distributeCards();
 	}
 
-	public void createPlayer(String name, double bettingMoney) {
+	private void createPlayer(String name, double bettingMoney) {
 		players.add(new Player(name, bettingMoney));
 	}
 
-	public void distributeCards() {
+	private void distributeCards() {
 		cardFactory.shuffle();
 		dealer.addCard(cardFactory.pop());
 		dealer.addCard(cardFactory.pop());
@@ -48,11 +48,22 @@ public class BlackJackGame {
 		UI.printDistributionResult(dealer, players);
 	}
 
-	public void gamePlay() {
+	private void gamePlay() {
+		for (Player player : players) {
+			playerGamePlay(player);
+		}
+		dealerGamePlay();
+	}
+
+	private void playerGamePlay(Player player) {
+		
+	}
+
+	private void dealerGamePlay() {
 
 	}
 
-	public void result() {
+	private void result() {
 
 	}
 }
