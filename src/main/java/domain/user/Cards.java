@@ -19,4 +19,8 @@ public class Cards {
 	public Card getCard(int index) {
 		return cards.get(index);
 	}
+	
+	public int getSize() {
+		return cards.size();
+	}
 }

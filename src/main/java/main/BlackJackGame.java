@@ -57,7 +57,9 @@ public class BlackJackGame {
 
 	private void playerGamePlay(Player player) {
 		UI.requestOneMoreCardMessage(player.getName());
-		
+		while(UI.requestYesOrNo()) {
+			player.addCard(cardFactory.pop());
+		}
 	}
 
 	private void dealerGamePlay() {

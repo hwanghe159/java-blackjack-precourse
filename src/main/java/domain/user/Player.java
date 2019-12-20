@@ -27,6 +27,10 @@ public class Player {
     	return this.name;
     }
     
+    public Cards getCards() {
+    	return this.cards;
+    }
+    
     public Card getCard(int index) {
     	return cards.getCard(index);
     }
