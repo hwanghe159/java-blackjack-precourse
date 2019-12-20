@@ -31,6 +31,6 @@ public class Dealer {
 	}
 	
 	private boolean isBelow16() {
-		this.cards.calculate()
+		return this.cards.calculate().isBelow16();
 	}
 }

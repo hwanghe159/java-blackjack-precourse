@@ -64,6 +64,7 @@ public class BlackJackGame {
 
 	private void dealerGamePlay() {
 		if (dealer.decideOneMoreCardOrNot()) {
+			dealer.addCard(cardFactory.pop());
 			UI.dealerReceivedOneCardMessage();
 		}
 	}
