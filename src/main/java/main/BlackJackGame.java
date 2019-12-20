@@ -13,6 +13,8 @@ public class BlackJackGame {
 	List<Player> players = new ArrayList<Player>();
 	Dealer dealer = new Dealer();
 	CardFactory cardFactory = new CardFactory();
+	List<Boolean> isAlive = new ArrayList<Boolean>();
+	List<Double> resultMoney = new ArrayList<Double>();
 
 	public void play() {
 		prepare();
@@ -70,6 +72,13 @@ public class BlackJackGame {
 	}
 
 	private void result() {
+		UI.printDealerAndPlayersResult(dealer,players);
+		calculateBettingMoney();
+		UI.printResultBettingMoney();
+	}
+
+	private void calculateBettingMoney() {
+		// TODO Auto-generated method stub
 		
 	}
 }

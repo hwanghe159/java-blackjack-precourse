@@ -61,6 +61,17 @@ public class UI {
 		System.out.println();
 	}
 
+	public static boolean requestYesOrNo(String playerName) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println(playerName + "는 한 장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
+		YesOrNo yesOrNo = new YesOrNo(scan.nextLine());
+		return yesOrNo.isYes();
+	}
+
+	public static void dealerReceivedOneCardMessage() {
+		System.out.println("딜러는 16이하라 한 장의 카드를 더 받았습니다.");
+	}
+
 	public static void printlnAllCardsAndResultOfPlayer(Player player) {
 		System.out.print(player.getName() + "카드: " + player.getCard(0).getCardInfo());
 		for (int i = 1; i < player.getCards().getSize(); i++) {
@@ -77,16 +88,15 @@ public class UI {
 		System.out.println(" - 결과: " + dealer.getCards().calculate().getScore());
 	}
 
-	public static boolean requestYesOrNo(String playerName) {
-		Scanner scan = new Scanner(System.in);
-		System.out.println(playerName + "는 한 장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
-		YesOrNo yesOrNo = new YesOrNo(scan.nextLine());
-		return yesOrNo.isYes();
+	public static void printDealerAndPlayersResult(Dealer dealer, List<Player> players) {
+		printlnAllCardsAndResultOfDealer(dealer);
+		for (Player player : players) {
+			printlnAllCardsAndResultOfPlayer(player);
+		}
 	}
 
-	public static void dealerReceivedOneCardMessage() {
-		System.out.println("딜러는 16이하라 한 장의 카드를 더 받았습니다.");
+	public static void printResultBettingMoney() {
+		// TODO Auto-generated method stub
+		
 	}
-	
-	
 }
