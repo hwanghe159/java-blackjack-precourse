@@ -34,6 +34,8 @@ public class Cards {
 	}
 
 	private int calculateSubRoutine(int sum, Card card) {
-		
+		if(!card.isAce()) {
+			return sum+card
+		}
 	}
 }
