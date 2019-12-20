@@ -2,6 +2,7 @@ package domain.user;
 
 public class Score {
 	private static final int SCORE_MIN = 0;
+	private static final int DEALER_BENCHMARK = 16;
 	private static final int BLACKJACK_SCORE = 21;
 
 	public static final Score ZERO = new Score(SCORE_MIN);
@@ -17,5 +18,9 @@ public class Score {
 
 	public int getScore() {
 		return this.score;
+	}
+
+	public boolean isBelow16() {
+		return this.score <= DEALER_BENCHMARK;
 	}
 }
