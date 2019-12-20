@@ -13,7 +13,7 @@ public class YesOrNo {
 			throw new IllegalArgumentException("입력문자가 두 자 이상이 될 수 없습니다.");
 		}
 		this.value = value.toLowerCase().charAt(0);
-		if (this.value != 'y' || this.value != 'n') {
+		if (this.value != 'y' && this.value != 'n') {
 			throw new IllegalArgumentException("입력문자는 y(Y)나 n(N)만 가능합니다.");
 		}
 	}

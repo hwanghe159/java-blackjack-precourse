@@ -21,4 +21,8 @@ public class Dealer {
     public Card getCard(int index) {
     	return cards.getCard(index);
     }
+    
+    public boolean decideOneMoreCardOrNot() {
+    	
+    }
 }

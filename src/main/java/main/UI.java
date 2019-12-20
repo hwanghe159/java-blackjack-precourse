@@ -54,7 +54,7 @@ public class UI {
 	}
 
 	public static void printAllCardsOfPlayer(Player player) {
-		System.out.println(player.getName() + "카드: " + player.getCard(0).getCardInfo());
+		System.out.print(player.getName() + "카드: " + player.getCard(0).getCardInfo());
 		for (int i = 1; i < player.getCards().getSize(); i++) {
 			System.out.print(", " + player.getCard(i).getCardInfo());
 		}
