@@ -58,7 +58,7 @@ public class BlackJackGame {
 	private void playerGamePlay(Player player) {
 		while (UI.requestYesOrNo(player.getName())) {
 			player.addCard(cardFactory.pop());
-			UI.printAllCardsOfPlayer(player);
+			UI.printlnAllCardsOfPlayer(player);
 		}
 	}
 
@@ -70,6 +70,6 @@ public class BlackJackGame {
 	}
 
 	private void result() {
-
+		
 	}
 }

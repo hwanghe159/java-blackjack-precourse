@@ -53,14 +53,22 @@ public class UI {
 
 	}
 
-	public static void printAllCardsOfPlayer(Player player) {
+	public static void printlnAllCardsOfPlayer(Player player) {
 		System.out.print(player.getName() + "카드: " + player.getCard(0).getCardInfo());
 		for (int i = 1; i < player.getCards().getSize(); i++) {
 			System.out.print(", " + player.getCard(i).getCardInfo());
 		}
 		System.out.println();
 	}
-	
+
+	public static void printAllCardsAndResultOfPlayer(Player player) {
+		System.out.print(player.getName() + "카드: " + player.getCard(0).getCardInfo());
+		for (int i = 1; i < player.getCards().getSize(); i++) {
+			System.out.print(", " + player.getCard(i).getCardInfo());
+		}
+		System.out.println(" - 결과: "+player.getCards())
+	}
+
 	public static boolean requestYesOrNo(String playerName) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println(playerName + "는 한 장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");

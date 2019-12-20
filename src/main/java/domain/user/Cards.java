@@ -26,6 +26,10 @@ public class Cards {
 		return cards.get(index);
 	}
 	
+	public List<Card> getCards(){
+		return this.cards;
+	}
+	
 	public int getSize() {
 		return cards.size();
 	}
