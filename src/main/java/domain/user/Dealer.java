@@ -23,6 +23,8 @@ public class Dealer {
     }
     
     public boolean decideOneMoreCardOrNot() {
-    	
+    	if(isBelow16()) {
+    		addCard()
+    	}
     }
 }
